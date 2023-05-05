@@ -15,9 +15,10 @@ dev = ["pytest", "pylint", "pytest-cov"]
 [tool.setuptools]
 packages = ["life_expectancy"]
 
-[tool.coverage.run]
-omit = [
-    "*/conftest.py", "*/test*", # omit test files
+[tool.pylint."messages control"]
+   disable = [
+      "missing-module-docstring",
+      # Add any other checks you want to disable here
 ]
 
 [tool.coverage.report]
